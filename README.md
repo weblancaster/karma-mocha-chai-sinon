@@ -17,7 +17,7 @@ Run unit tests and generate new coverage report folder
 
 `npm test`
 
-Run unit tests in the CI e.g Travis/Bamboo
+Run unit tests in CI e.g Travis/Bamboo
 
 `npm run-script ci-test`
 
