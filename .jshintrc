@@ -1,0 +1,24 @@
+{
+"node": true,
+"browser": true,
+"jquery": true,
+"eqnull": true,
+"evil": false,
+"plusplus": false,
+"loopfunc": true,
+"boss": true,
+"shadow": true,
+"latedef": "nofunc",
+"curly": true,
+"eqeqeq": true,
+"freeze": true,
+"noarg": true,
+"strict": false,
+"globalstrict": true,
+"globals": {
+"unused": "vars",
+"undef": true
+},
+"-W082": false,
+"-W004": false
+}
