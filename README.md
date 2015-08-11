@@ -9,7 +9,7 @@ Quick starter to Unit Tests with Karma + Mocha + Chai + Sinon
 
 ### How to use
 
-Install require packages
+Install required packages
 
 `npm install`
 
