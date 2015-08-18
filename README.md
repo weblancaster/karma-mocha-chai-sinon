@@ -5,7 +5,7 @@ Quick starter to Unit Tests with Karma + Mocha + Chai + Sinon
 ### Requirements:
 
 - Node
-- Karma CLI module
+- Karma cli
 
 ### How to use
 
