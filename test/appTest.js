@@ -1,32 +1,45 @@
 "use strict";
 
-describe('App', function() {
+describe('Units', function() {
 
-    describe('Math', function() {
-        it('add 1 + 2 equal 3', function() {
-            var result = add(1, 2);
+    describe('Spy', function() {
+        it('spy on a function', function() {
+            var addSpy = sinon.spy(add());
 
-            expect(result).to.be.equal(3);
-        });
+            addSpy(2, 4);
 
-        it('multiply 4 * 2 equal 8', function() {
-            var result = multiply(4, 2);
+            expect(addSpy.called).to.be.true;
 
-            expect(result).to.be.equal
+            addSpy.reset(); // reset spy to it's normal state
         });
     });
 
-    describe('Person', function() {
-        it('return john doe age 24 obj', function() {
+    describe('Multiply', function() {
+        it('mock function', function() {
+            var multiplyMock = sinon.mock(obj);
+
+            multiplyMock.expects('foo').once();
+
+            obj.foo();
+
+            multiplyMock.verify();
+        });
+    });
+
+    describe('Stub', function() {
+        it('stub function', function() {
+            var result;
             var isTruthyStub = sinon.stub(isTruthy()).returns(true);
             var obj = {
                 "name": "John Doe",
                 "age": 24
             };
 
-            var result = person('John Doe', 24);
+            result = person('John Doe', 24);
 
             expect(result).to.be.deep.equal(obj);
+
+            isTruthyStub.reset(); // reset spy to it's normal state
         })
     });
 
