@@ -2,7 +2,7 @@
 
 describe('Units', function() {
 
-    describe('Spy', function() {
+    context('Spy', function() {
         it('spy on a function', function() {
             var addSpy = sinon.spy(add());
 
@@ -14,19 +14,7 @@ describe('Units', function() {
         });
     });
 
-    describe('Multiply', function() {
-        it('mock function', function() {
-            var multiplyMock = sinon.mock(obj);
-
-            multiplyMock.expects('foo').once();
-
-            obj.foo();
-
-            multiplyMock.verify();
-        });
-    });
-
-    describe('Stub', function() {
+    context('Stub', function() {
         it('stub function', function() {
             var result;
             var isTruthyStub = sinon.stub(isTruthy()).returns(true);
@@ -41,6 +29,18 @@ describe('Units', function() {
 
             isTruthyStub.reset(); // reset spy to it's normal state
         })
+    });
+
+    context('Mock', function() {
+        it('mock function', function() {
+            var multiplyMock = sinon.mock(obj);
+
+            multiplyMock.expects('foo').once();
+
+            obj.foo();
+
+            multiplyMock.verify();
+        });
     });
 
 });
