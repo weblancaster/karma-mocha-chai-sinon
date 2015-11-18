@@ -23,15 +23,34 @@
 		<input type="hidden" name="price" id="price" value="50.00">
 		<button type="submit" id="submit">Apply</button>
 	</form>
-	
+
 	<!-- all value are hard coded to show a simple example -->
 	<p>Price: <strong>$50.00</strong></p>
-	
-	<div>
-		<p>Total price with promo code applied: <strong>$<span id="totalPrice-view">50.00</span></strong></p>
-	</div>
-	
+    <p>Total price with promo code applied: <strong>$<span id="totalPrice-view">50.00</span></strong></p>
+
 	<script src="/node_modules/whatwg-fetch/fetch.js"></script>
 	<script src="scripts/app.js"></script>
+
+    <script>
+    (function(window, undefined) {
+
+        function startCheckout() {
+            var total = document.querySelector('#price').value;
+            var promocode = document.querySelector('#promoCode').value;
+            var cart = new Cart(total, promocode);
+        }
+
+        function handleSubmit(){
+            var submitButton = document.querySelector('#submit');
+
+            submitButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                startCheckout();
+            }, false)
+        }
+
+        handleSubmit();
+    })(window);
+    </script>
 </body>
 </html>
