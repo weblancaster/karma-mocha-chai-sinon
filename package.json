@@ -20,5 +20,9 @@
     "phantomjs": "^1.9.18",
     "proxyquire": "^1.7.3",
     "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "whatwg-fetch": "^0.10.1"
   }
 }

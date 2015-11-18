@@ -3,10 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Introduction to Javascript unit test</title>
+
+	<style type="text/css">
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		font-family: helvetica, sans-serif;
+	}
+	</style>
 </head>
 <body>
 	<h1>Introduction to Javascript unit test</h1>
 
+	<form>
+		<label>
+			<input type="text" name="promoCode" placeholder="enter your promo code" id="promoCode">
+		</label>
+		<input type="hidden" name="price" id="price" value="50.00">
+		<button type="submit" id="submit">Apply</button>
+	</form>
+	
+	<!-- all value are hard coded to show a simple example -->
+	<p>Price: <strong>$50.00</strong></p>
+	
+	<div>
+		<p>Total price with promo code applied: <strong>$<span id="totalPrice-view">50.00</span></strong></p>
+	</div>
+	
+	<script src="/node_modules/whatwg-fetch/fetch.js"></script>
 	<script src="scripts/app.js"></script>
 </body>
 </html>

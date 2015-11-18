@@ -44,3 +44,16 @@ describe('Units', function() {
     });
 
 });
+
+"use strict";
+
+describe('Cart', function() {
+    describe('checkout', function() {
+        it('User apply promo code', function() {
+            
+        });
+        it('User doesn\'t aply promo code', function() {
+            
+        });
+    })
+});
