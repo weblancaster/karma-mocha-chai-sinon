@@ -65,10 +65,12 @@ describe('Cart', function () {
 
             it('Apply promo code to price', function() {
                 var renderStub = sandbox.stub(cart, 'render');
+                //var applyPromoValueSpy = sandbox.spy(cart, 'applyPromoValue');
                 var promoValue = 20;
 
                 cart.applyPromoValue(promoValue);
 
+                //expect(applyPromoValueSpy.calledWith(20)).to.be.ok;
                 expect(cart.totalPrice).to.be.equal(10);
             });
 
@@ -77,8 +79,8 @@ describe('Cart', function () {
                 cart.applyPromoValue(promoValue);
                 var elTextContent = document.querySelector('#totalPrice-view').textContent;
 
-                expect(elTextContent).to.be.equal('10.00')
-            })
+                expect(elTextContent).to.be.equal('10.00');
+            });
         });
 
     });
