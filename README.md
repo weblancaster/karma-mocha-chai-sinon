@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/weblancaster/karma-mocha-chai-sinon.svg?branch=master)](https://travis-ci.org/weblancaster/karma-mocha-chai-sinon)
+
 # karma-mocha-chai-sinon
 
 Quick starter to Unit Tests with Karma + Mocha + Chai + Sinon
@@ -16,10 +18,6 @@ Install required packages
 Run unit tests and generate new coverage report folder
 
 `npm test`
-
-Run unit tests in CI e.g Travis/Bamboo
-
-`npm run-script ci-test`
 
 ### License
 
