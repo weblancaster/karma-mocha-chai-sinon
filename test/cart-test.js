@@ -65,12 +65,12 @@ describe('Cart', function () {
 
             it('Apply promo code to price', function() {
                 var renderStub = sandbox.stub(cart, 'render');
-                //var applyPromoValueSpy = sandbox.spy(cart, 'applyPromoValue');
+                var applyPromoValueSpy = sandbox.spy(cart, 'applyPromoValue');
                 var promoValue = 20;
 
                 cart.applyPromoValue(promoValue);
 
-                //expect(applyPromoValueSpy.calledWith(20)).to.be.ok;
+                expect(applyPromoValueSpy.calledWith(20)).to.be.ok;
                 expect(cart.totalPrice).to.be.equal(10);
             });
 
