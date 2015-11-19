@@ -5,8 +5,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "ci-test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS",
-    "test": "node_modules/.bin/karma start karma.conf.js"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "devDependencies": {
     "chai": "^3.4.1",
