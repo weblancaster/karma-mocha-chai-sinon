@@ -42,7 +42,6 @@ Cart.prototype.getPromoValue = function () {
 };
 
 Cart.prototype.validatePromoCode = function () {
-    var that = this;
     var promoValue = 0;
     var promoCode = this.promoCode;
 
